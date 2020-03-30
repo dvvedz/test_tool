@@ -5,6 +5,7 @@ from modules.TestStrings import TestStrings
 from modules.TestNumbers import TestNumbers
 
 if __name__ == "__main__":
+
     # init instances
     randStr = TestStrings()
     randNum = TestNumbers()

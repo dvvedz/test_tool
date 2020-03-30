@@ -2,6 +2,7 @@ import string
 import random
 
 class TestStrings:
+
     def randStrLow(self, len):
         letter = string.ascii_lowercase
         return "".join(random.choice( letter ) for i in range( len ))
