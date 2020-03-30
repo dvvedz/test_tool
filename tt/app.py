@@ -20,9 +20,8 @@ class TestNumbers:
     def randNumb(self, len):
         return "".join(str(random.randint(0, 9)) for i in range( len ))
 
-
-if __name__ == "__main__":
-    # init instances
+if __main__ == "__main__":
+# init instances
     randStr = TestStrings()
     randNum = TestNumbers()
 
@@ -36,12 +35,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if( args.rsl ): 
-        print(randStr.randStrLow( args.rsl ))
+    print(randStr.randStrLow( args.rsl ))
     elif(args.rsu):
-        print(randStr.randStrUpper( args.rsu )) 
+    print(randStr.randStrUpper( args.rsu )) 
     elif(args.rs):
-        print( randStr.randStri( args.rs ))
+    print( randStr.randStri( args.rs ))
     elif( args.rn ):
-        print( randNum.randNumb( args.rn ))
+    print( randNum.randNumb( args.rn ))
         
     
