@@ -1,6 +1,8 @@
 import string 
 import random
 from urllib import parse
+import base64
+
 class TestStrings:
 
     def randStrLow(self, len):
@@ -24,3 +26,9 @@ class TestStrings:
 
     def urlDecode(self, stri):
         return parse.unquote(stri)
+
+    def base46enc(self, stri):
+        return base64.b64encode(stri.encode())
+    
+    def base64dec(self, stri):
+        return base64.b64decode(stri.encode())

@@ -16,8 +16,12 @@ if __name__ == "__main__":
     parser.add_argument("-rsu", type=int, help="Uppercase string")
     parser.add_argument("-rs", type=int, help="Upper and lowercase string")
     parser.add_argument("-rsr", type=int, help="Only special chars") # Needs fixing i think... more testing to be done
+
     parser.add_argument("-ue", type=str, help="URL encode")
     parser.add_argument("-ud", type=str, help="URL decode")
+    parser.add_argument("-be", type=str, help="Base64 encode")
+    parser.add_argument("-bd", type=str, help="Base64 decode")
+
     parser.add_argument("-rn", type=int, help="Random numbers")
 
     args = parser.parse_args()
@@ -34,6 +38,10 @@ if __name__ == "__main__":
         print( testStrings.urlEncode( args.ue ))
     elif( args.ud ):
         print( testStrings.urlDecode( args.ud ))
+    elif( args.be ):
+        print( testStrings.base46enc( args.be ))
+    elif( args.bd ):
+        print( testStrings.base64dec( args.bd ))
 
     # Numbers    
     elif( args.rn ):
