@@ -34,6 +34,7 @@ class TestStrings:
         return base64.b64decode(stri.encode())
     
     def counterStri(self, leng):
+        # TODO: fix so that the user can change separator char from "*" to what ever is inputed as an argument
         arr = []
         i = 2 
 
@@ -46,8 +47,7 @@ class TestStrings:
                 if iLen != iLenPrev:
                     i = int(iPrev) + iLen +1
 
-            except IndexError: 
-                pass
+            except IndexError: pass
 
             arr.append(i)
             arr.append("*")
