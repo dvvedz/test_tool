@@ -1,1 +1,2 @@
-# tt - test tool, for generating strings, decoding and encoding stuff
+# tt - test tool
+For generating strings, decoding and encoding stuff while testing
