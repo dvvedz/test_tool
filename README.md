@@ -3,7 +3,7 @@ For generating strings, decoding and encoding stuff while testing
 
 ### tt help
 
-| commands  | help                           |
+| Arguments | help                           |
 |:----------|:-------------------------------|
 |-h, --help | show this help message and exit|
 |-rsl       | Lowercase string               |
