@@ -1,2 +1,1 @@
-# test_tool
-Very simple command line tool for generating different types of strings
+# tt - test tool, for generating strings, decoding and encoding stuff
