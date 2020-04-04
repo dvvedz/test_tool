@@ -1,5 +1,6 @@
 import sys
 import argparse
+import pyperclip 
 
 from modules.TestStrings import TestStrings
 from modules.TestNumbers import TestNumbers
@@ -28,24 +29,29 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # Strings
     if( args.rsl ): 
-        print(testStrings.randStrLow( args.rsl ))
+        val = testStrings.randStrLow( args.rsl )
     elif(args.rsu):
-        print(testStrings.randStrUpper( args.rsu )) 
+        val = testStrings.randStrUpper( args.rsu )
     elif(args.rs):
-        print( testStrings.randStri( args.rs ))
+        val = testStrings.randStri( args.rs )
     elif ( args.rsr ):
-        print( testStrings.randSpecChar( args.rsr))
+        val = testStrings.randSpecChar( args.rsr )
     elif ( args.ue ):
-        print( testStrings.urlEncode( args.ue ))
+        val = testStrings.urlEncode( args.ue )
     elif( args.ud ):
-        print( testStrings.urlDecode( args.ud ))
+        val = testStrings.urlDecode( args.ud )
     elif( args.be ):
-        print( testStrings.base46enc( args.be ))
+        val = testStrings.base46enc( args.be )
     elif( args.bd ):
-        print( testStrings.base64dec( args.bd ))
+        val = testStrings.base64dec( args.bd )
     elif( args.cs ):
-        print( testStrings.counterStri( args.cs ))
+        val = testStrings.counterStri( args.cs )
 
     # Numbers    
     elif( args.rn ):
-        print( randNum.randNumb( args.rn ))
+        val = randNum.randNumb( args.rn )
+
+
+    pyperclip.copy(val)
+    print(val)
+    print("Copied to clipboard")
