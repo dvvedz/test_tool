@@ -32,3 +32,34 @@ class TestStrings:
     
     def base64dec(self, stri):
         return base64.b64decode(stri.encode())
+    
+    def counterStri(self, leng):
+        arr = []
+        i = 2 
+
+        while i < leng +1:
+            try:
+                iLen = len(str( i )) # Get current lenth of i
+                iLenPrev = len(str(arr[-iLen]))
+                iPrev = str(arr[-2])
+
+                if iLen != iLenPrev:
+                    i = int(iPrev) + iLen +1
+
+            except IndexError: 
+                pass
+
+            arr.append(i)
+            arr.append("*")
+
+            i += iLen +1
+
+        csLen = "".join(str(c) for c in arr)
+
+        if leng > len(csLen):
+            arr.append(str(i)[:leng - len(csLen)])
+            csLen = "".join(str(c) for c in arr)
+        elif leng < len(csLen):
+            csLen = csLen[:-(len(csLen) - leng)]
+
+        return csLen

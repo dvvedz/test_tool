@@ -16,6 +16,7 @@ if __name__ == "__main__":
     parser.add_argument("-rsu", type=int, help="Uppercase string")
     parser.add_argument("-rs", type=int, help="Upper and lowercase string")
     parser.add_argument("-rsr", type=int, help="Only special chars") # Needs fixing i think... more testing to be done
+    parser.add_argument("-cs", type=int, help="Creates a counterstring")
 
     parser.add_argument("-ue", type=str, help="URL encode")
     parser.add_argument("-ud", type=str, help="URL decode")
@@ -42,6 +43,8 @@ if __name__ == "__main__":
         print( testStrings.base46enc( args.be ))
     elif( args.bd ):
         print( testStrings.base64dec( args.bd ))
+    elif( args.cs ):
+        print( testStrings.counterStri( args.cs ))
 
     # Numbers    
     elif( args.rn ):
