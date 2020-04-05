@@ -52,6 +52,5 @@ if __name__ == "__main__":
         val = randNum.randNumb( args.rn )
 
 
-    pyperclip.copy(val)
+    pyperclip.copy(str(val))
     print(val)
-    print("Copied to clipboard")
