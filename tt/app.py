@@ -43,14 +43,18 @@ if __name__ == "__main__":
     elif( args.be ):
         val = testStrings.base46enc( args.be )
     elif( args.bd ):
-        val = testStrings.base64dec( args.bd )
-    elif( args.cs ):
+        val = testStrings.base64dec( args.bd ) 
+    elif( args.cs ): 
         val = testStrings.counterStri( args.cs )
 
     # Numbers    
     elif( args.rn ):
         val = randNum.randNumb( args.rn )
 
+    try:
+        print(val)
+        pyperclip.copy(str(val))
+    except NameError:
+        parser.print_help()
 
-    pyperclip.copy(str(val))
-    print(val)
+
