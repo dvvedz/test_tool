@@ -1,6 +1,5 @@
 import sys
 import argparse
-import pyperclip 
 
 from modules.TestStrings import TestStrings
 from modules.TestNumbers import TestNumbers
@@ -51,9 +50,9 @@ if __name__ == "__main__":
     elif( args.rn ):
         val = randNum.randNumb( args.rn )
 
-    try:
+    try: 
+        # Checks if arguments are supplied else prints a help 
         print(val)
-        pyperclip.copy(str(val))
     except NameError:
         parser.print_help()
 
