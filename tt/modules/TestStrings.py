@@ -28,10 +28,12 @@ class TestStrings:
         return parse.unquote(stri)
 
     def base46enc(self, stri):
-        return base64.b64encode(stri.encode())
+        val = base64.b64encode(stri.encode())
+        return val.decode("utf-8")
     
     def base64dec(self, stri):
-        return base64.b64decode(stri.encode())
+        val =  base64.b64decode(stri)
+        return val.decode("utf-8")
     
     def counterStri(self, leng):
         # TODO: fix so that the user can change separator char from "*" to what ever is inputed as an argument
