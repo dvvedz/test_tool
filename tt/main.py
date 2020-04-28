@@ -22,6 +22,8 @@ if __name__ == "__main__":
     parser.add_argument("-ud", type=str, help="URL decode")
     parser.add_argument("-be", type=str, help="Base64 encode")
     parser.add_argument("-bd", type=str, help="Base64 decode")
+    parser.add_argument("-he", type=str, help="HTML encode")
+    parser.add_argument("-hd", type=str, help="HTML decode")
 
     parser.add_argument("-rn", type=int, help="Random numbers")
 
@@ -45,6 +47,10 @@ if __name__ == "__main__":
         val = testStrings.base64dec( args.bd ) 
     elif( args.cs ): 
         val = testStrings.counterStri( args.cs )
+    elif( args.he ): 
+        val = testStrings.htmlencode( args.he )
+    elif( args.hd ): 
+        val = testStrings.htmldecode( args.hd )
 
     # Numbers    
     elif( args.rn ):

@@ -2,6 +2,7 @@ import string
 import random
 from urllib import parse
 import base64
+import html
 
 class TestStrings:
 
@@ -65,3 +66,9 @@ class TestStrings:
             csLen = csLen[:-(len(csLen) - leng)]
 
         return csLen
+
+    def htmlencode(self, stri):
+        return html.escape(stri)
+    
+    def htmldecode(self, stri):
+        return html.unescape(stri)
